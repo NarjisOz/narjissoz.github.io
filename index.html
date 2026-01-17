@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio – Narjisse Ouriz</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+
   <style>
+    /* ===================== */
     /* Styles généraux */
+    /* ===================== */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -16,9 +18,14 @@
       scroll-behavior: smooth;
     }
 
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* Barre de navigation */
+    /* ===================== */
+    /* Navigation */
+    /* ===================== */
     nav {
       position: sticky;
       top: 0;
@@ -30,43 +37,69 @@
     }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin: 0 20px;
       font-weight: bold;
       transition: 0.3s;
     }
 
-    nav a:hover { color: #ff9800; }
+    nav a:hover {
+      color: #ff9800;
+    }
 
+    /* ===================== */
     /* Header */
+    /* ===================== */
     header {
       text-align: center;
       padding: 50px 20px;
       background-color: #222;
-      color: #fff;
+      color: #ffffff;
     }
 
-    header img.profile-img {
+    .profile-img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #fff;
+      border: 3px solid #ffffff;
       margin-bottom: 20px;
+      background-color: #ddd;
     }
 
     header h1 {
       margin: 0 0 10px 0;
       font-size: 2em;
-      color: #fff; /* Texte Narjisse Ouriz clair */
     }
 
     header p {
       font-size: 1.1em;
-      color: #ddd;
+      color: #dddddd;
     }
 
+    /* ===================== */
+    /* Boutons */
+    /* ===================== */
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 12px 6px 0 0;
+      background-color: #1b1b1b;
+      color: #f5f5f5 !important;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #ff9800;
+      color: #ffffff !important;
+    }
+
+    /* ===================== */
     /* Sections */
+    /* ===================== */
     section {
       max-width: 1000px;
       margin: 50px auto;
@@ -80,24 +113,9 @@
       font-size: 1.8em;
     }
 
-    /* Boutons */
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px 5px 0 0;
-      background-color: #1b1b1b;
-      color: #fff; /* Texte clair pour bouton */
-      font-weight: bold;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .button:hover { 
-      background-color: #ff9800; /* Survol orange clair */
-      color: #fff;
-    }
-
+    /* ===================== */
     /* Projets */
+    /* ===================== */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -105,7 +123,7 @@
     }
 
     .projects-grid article {
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       padding: 15px;
@@ -113,7 +131,9 @@
       transition: 0.3s;
     }
 
-    .projects-grid article:hover { transform: translateY(-5px); }
+    .projects-grid article:hover {
+      transform: translateY(-5px);
+    }
 
     .projects-grid img {
       width: 100%;
@@ -121,13 +141,23 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 15px;
+      background-color: #eee;
     }
 
-    .projects-grid h3 { margin-bottom: 10px; color: #1b1b1b; }
+    .projects-grid h3 {
+      margin-bottom: 10px;
+      color: #1b1b1b;
+    }
 
-    .projects-grid p { font-size: 0.95em; line-height: 1.5em; margin-bottom: 15px; }
+    .projects-grid p {
+      font-size: 0.95em;
+      line-height: 1.5em;
+      margin-bottom: 15px;
+    }
 
+    /* ===================== */
     /* Compétences */
+    /* ===================== */
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -139,14 +169,20 @@
 
     .skills-list li {
       background-color: #1b1b1b;
-      color: #fff;
+      color: #ffffff;
       padding: 10px 15px;
       border-radius: 5px;
       font-weight: bold;
     }
 
+    /* ===================== */
     /* Contact */
-    #contact p { margin: 5px 0; font-size: 1em; }
+    /* ===================== */
+    #contact p {
+      margin: 6px 0;
+      font-size: 1em;
+    }
+
     .social-links {
       display: flex;
       justify-content: center;
@@ -154,14 +190,19 @@
       list-style: none;
       padding: 10px 0;
     }
-    .social-links li a {
+
+    .social-links a {
       font-weight: bold;
-      color: #1b1b1b; /* Texte clair pour les liens */
+      color: #1b1b1b;
       transition: 0.3s;
     }
-    .social-links li a:hover { color: #ff9800; }
+
+    .social-links a:hover {
+      color: #ff9800;
+    }
   </style>
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -176,7 +217,8 @@
 <header>
   <img src="images/mon_image.jpg" alt="Narjisse Ouriz" class="profile-img">
   <h1>Narjisse Ouriz</h1>
-  <p>Étudiante Master Ingénierie de la Décision • Data Analysis • Business Intelligence</p>
+  <p>Master Ingénierie de la Décision • Data Analysis • Business Intelligence</p>
+
   <a href="cv-narjisse-ouriz.pdf" class="button" download>📄 Télécharger mon CV</a>
   <a href="lettre-de-motivation.pdf" class="button" download>✉️ Télécharger ma lettre de motivation</a>
 </header>
@@ -185,39 +227,52 @@
 <section id="about">
   <h2>Profil</h2>
   <p>
-    Étudiante en Master Ingénierie de la Décision, spécialisée en analyse de données et Business Intelligence.
-    Je transforme des données brutes en indicateurs clés, dashboards et recommandations décisionnelles à forte valeur métier.
-    À la recherche d’un stage PFE rémunéré ou d’une opportunité junior en analyse décisionnelle dès février.
+    Étudiante en Master Ingénierie de la Décision, spécialisée en analyse de données
+    et Business Intelligence. Je transforme les données brutes en indicateurs clés,
+    dashboards et recommandations décisionnelles à forte valeur métier.
   </p>
 </section>
 
 <!-- Projets -->
 <section id="projects">
   <h2>Projets</h2>
+
   <div class="projects-grid">
 
-    <!-- Projet 1 -->
     <article>
-      <img src="images/image3.jpg" alt="Acme Co. Sales Analysis">
+      <img src="images/image3.jpg" alt="Acme Sales Analysis">
       <h3>Acme Co. Sales Analysis (2014–2018)</h3>
-      <p>Analyse des ventes multi-annuelles, identification des risques produit/client et dashboards décisionnels. <strong>Outils :</strong> Python, Jupyter Notebook, Power BI</p>
-      <a href="https://github.com/NarjisOz/acme-sales-analysis-powerbi" target="_blank" class="button">Voir le projet</a>
+      <p>
+        Analyse des ventes multi-annuelles et dashboards décisionnels.
+        <strong>Outils :</strong> Python, Power BI
+      </p>
+      <a href="https://github.com/NarjisOz/acme-sales-analysis-powerbi" class="button" target="_blank">
+        Voir le projet
+      </a>
     </article>
 
-    <!-- Projet 2 -->
     <article>
-      <img src="images/image2.jpg" alt="Bike Shop Sales Analysis">
+      <img src="images/image2.jpg" alt="Bike Shop Analysis">
       <h3>Bike Shop Sales Analysis (2021–2022)</h3>
-      <p>Analyse business et rentabilité d’un service de location de vélos sur deux années, saisonnalité et optimisation des prix. <strong>Outils :</strong> SQL, Power BI, Excel</p>
-      <a href="https://github.com/NarjisOz/Bike-Shop-Data-Analysis" target="_blank" class="button">Voir le projet</a>
+      <p>
+        Analyse business, saisonnalité et rentabilité.
+        <strong>Outils :</strong> SQL, Power BI
+      </p>
+      <a href="https://github.com/NarjisOz/Bike-Shop-Data-Analysis" class="button" target="_blank">
+        Voir le projet
+      </a>
     </article>
 
-    <!-- Projet 3 -->
     <article>
-      <img src="images/image1.jpg" alt="Healthcare BI Dashboard">
-      <h3>Healthcare BI – Thyroid Cancer Recurrence</h3>
-      <p>Dashboard décisionnel sur la récidive du cancer de la thyroïde avec segmentation des patients et recommandations opérationnelles. <strong>Outils :</strong> Power BI, Python</p>
-      <a href="https://github.com/NarjisOz/healthcare-bi-thyroid-cancer-recurrence" target="_blank" class="button">Voir le projet</a>
+      <img src="images/image1.jpg" alt="Healthcare BI">
+      <h3>Healthcare BI – Thyroid Cancer</h3>
+      <p>
+        Dashboard décisionnel santé et segmentation patients.
+        <strong>Outils :</strong> Power BI, Python
+      </p>
+      <a href="https://github.com/NarjisOz/healthcare-bi-thyroid-cancer-recurrence" class="button" target="_blank">
+        Voir le projet
+      </a>
     </article>
 
   </div>
@@ -227,11 +282,11 @@
 <section id="skills">
   <h2>Compétences</h2>
   <ul class="skills-list">
-    <li>Python (Pandas, NumPy, Scikit-learn)</li>
-    <li>Machine Learning (Classification, Clustering)</li>
+    <li>Python (Pandas, NumPy)</li>
+    <li>Machine Learning</li>
     <li>SQL & Bases de données</li>
-    <li>Power BI & Data Visualization</li>
-    <li>Analyse décisionnelle & Data Storytelling</li>
+    <li>Power BI</li>
+    <li>Data Storytelling</li>
   </ul>
 </section>
 
@@ -239,10 +294,8 @@
 <section id="contact">
   <h2>Contact</h2>
   <p><strong>Email :</strong> ouriznarjisse@gmail.com</p>
-  <p><strong>Adresse :</strong> Settat</p>
   <p><strong>Localisation :</strong> Casablanca-Settat, Maroc</p>
 
-  <h3>Réseaux sociaux</h3>
   <ul class="social-links">
     <li><a href="https://github.com/NarjisOz" target="_blank">GitHub</a></li>
     <li><a href="https://linkedin.com/in/narjisse-ouriz-25b172374" target="_blank">LinkedIn</a></li>
