@@ -6,18 +6,25 @@
   <title>Portfolio – Narjisse Ouriz</title>
 
   <style>
+    /* RESET */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #f9f9f9;
       color: #333;
       scroll-behavior: smooth;
     }
 
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* Navigation */
+    /* NAVBAR */
     nav {
       position: sticky;
       top: 0;
@@ -29,20 +36,22 @@
     }
 
     nav a {
-      color: #ffffff;
+      color: #ffffff !important;
       margin: 0 20px;
       font-weight: bold;
-      transition: 0.3s;
+      transition: color 0.3s ease;
     }
 
-    nav a:hover { color: #ff9800; }
+    nav a:hover {
+      color: #ff9800 !important;
+    }
 
-    /* Header */
+    /* HEADER */
     header {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
       background-color: #222;
-      color: #ffffff;
+      color: #fff;
     }
 
     header img.profile-img {
@@ -50,25 +59,52 @@
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #ffffff;
+      border: 3px solid #fff;
       margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     header h1 {
-      margin: 0 0 10px 0;
+      margin-bottom: 10px;
       font-size: 2em;
       color: #ffffff;
     }
 
     header p {
-      font-size: 1.1em;
       color: #dddddd;
+      font-size: 1.1em;
     }
 
-    /* Sections */
+    /* BOUTONS */
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 12px 8px;
+      background-color: #1b1b1b;
+      color: #ffffff !important;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:visited,
+    .button:focus,
+    .button:active {
+      color: #ffffff !important;
+    }
+
+    .button:hover {
+      background-color: #ff9800;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
     section {
       max-width: 1000px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
@@ -79,25 +115,7 @@
       font-size: 1.8em;
     }
 
-    /* Boutons – TEXTE CLAIR GARANTI */
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px 5px 0 0;
-      background-color: #1b1b1b;
-      color: #f5f5f5 !important;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background-color: #ff9800;
-      color: #ffffff !important;
-    }
-
-    /* Projets */
+    /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -106,14 +124,16 @@
 
     .projects-grid article {
       background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 18px;
       text-align: center;
-      transition: 0.3s;
+      transition: transform 0.3s ease;
     }
 
-    .projects-grid article:hover { transform: translateY(-5px); }
+    .projects-grid article:hover {
+      transform: translateY(-6px);
+    }
 
     .projects-grid img {
       width: 100%;
@@ -121,21 +141,21 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 15px;
-      background-color: #eeeeee;
+      display: block;
     }
 
     .projects-grid h3 {
-      margin-bottom: 10px;
       color: #1b1b1b;
+      margin-bottom: 10px;
     }
 
     .projects-grid p {
       font-size: 0.95em;
-      line-height: 1.5em;
+      line-height: 1.6;
       margin-bottom: 15px;
     }
 
-    /* Compétences */
+    /* SKILLS */
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -148,32 +168,32 @@
     .skills-list li {
       background-color: #1b1b1b;
       color: #ffffff;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 10px 18px;
+      border-radius: 6px;
       font-weight: bold;
     }
 
-    /* Contact */
+    /* CONTACT */
     #contact p {
-      margin: 5px 0;
-      font-size: 1em;
+      text-align: center;
+      margin: 6px 0;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       list-style: none;
-      padding: 10px 0;
+      padding: 15px 0;
     }
 
-    .social-links li a {
-      font-weight: bold;
+    .social-links a {
       color: #1b1b1b;
-      transition: 0.3s;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
-    .social-links li a:hover {
+    .social-links a:hover {
       color: #ff9800;
     }
   </style>
@@ -189,11 +209,11 @@
 </nav>
 
 <header>
-  <img src="images/mon_image.jpg" alt="Narjisse Ouriz" class="profile-img">
+  <img src="./images/mon_image.jpg" alt="Narjisse Ouriz" class="profile-img">
   <h1>Narjisse Ouriz</h1>
   <p>Étudiante Master Ingénierie de la Décision • Data Analysis • Business Intelligence</p>
-  <a href="cv-narjisse-ouriz.pdf" class="button" download>📄 Télécharger mon CV</a>
-  <a href="lettre-de-motivation.pdf" class="button" download>✉️ Télécharger ma lettre de motivation</a>
+  <a href="./cv-narjisse-ouriz.pdf" class="button" download>📄 Télécharger mon CV</a>
+  <a href="./lettre-de-motivation.pdf" class="button" download>✉️ Télécharger ma lettre de motivation</a>
 </header>
 
 <section id="about">
@@ -210,21 +230,21 @@
   <div class="projects-grid">
 
     <article>
-      <img src="images/image3.jpg" alt="Acme Co. Sales Analysis">
+      <img src="./images/image3.jpg" alt="Acme Co. Sales Analysis">
       <h3>Acme Co. Sales Analysis (2014–2018)</h3>
       <p>Analyse des ventes multi-annuelles, identification des risques produit/client et dashboards décisionnels. <strong>Outils :</strong> Python, Jupyter Notebook, Power BI</p>
       <a href="https://github.com/NarjisOz/acme-sales-analysis-powerbi" target="_blank" class="button">Voir le projet</a>
     </article>
 
     <article>
-      <img src="images/image2.jpg" alt="Bike Shop Sales Analysis">
+      <img src="./images/image2.jpg" alt="Bike Shop Sales Analysis">
       <h3>Bike Shop Sales Analysis (2021–2022)</h3>
       <p>Analyse business et rentabilité d’un service de location de vélos sur deux années, saisonnalité et optimisation des prix. <strong>Outils :</strong> SQL, Power BI, Excel</p>
       <a href="https://github.com/NarjisOz/Bike-Shop-Data-Analysis" target="_blank" class="button">Voir le projet</a>
     </article>
 
     <article>
-      <img src="images/image1.jpg" alt="Healthcare BI Dashboard">
+      <img src="./images/image1.jpg" alt="Healthcare BI Dashboard">
       <h3>Healthcare BI – Thyroid Cancer Recurrence</h3>
       <p>Dashboard décisionnel sur la récidive du cancer de la thyroïde avec segmentation des patients et recommandations opérationnelles. <strong>Outils :</strong> Power BI, Python</p>
       <a href="https://github.com/NarjisOz/healthcare-bi-thyroid-cancer-recurrence" target="_blank" class="button">Voir le projet</a>
@@ -250,7 +270,7 @@
   <p><strong>Adresse :</strong> Settat</p>
   <p><strong>Localisation :</strong> Casablanca-Settat, Maroc</p>
 
-  <h3>Réseaux sociaux</h3>
+  <h3 style="text-align:center;">Réseaux sociaux</h3>
   <ul class="social-links">
     <li><a href="https://github.com/NarjisOz" target="_blank">GitHub</a></li>
     <li><a href="https://linkedin.com/in/narjisse-ouriz-25b172374" target="_blank">LinkedIn</a></li>
